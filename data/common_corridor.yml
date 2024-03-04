@@ -1,0 +1,35 @@
+data:
+  width: 10
+  height: 10
+  origin: [0, 0]
+  obstacles:
+    left_corridor:
+      geometry: rectangle
+      width: 3.5
+      height: 5
+      origin: [1.75, 5]
+    right_corridor:
+      geometry: rectangle
+      width: 3.5
+      height: 5
+      origin: [8.25, 5]
+    left_wall:
+      geometry: rectangle
+      width: 5
+      height: 15
+      origin: [-2.5, 5]
+    right_wall:
+      geometry: rectangle
+      width: 5
+      height: 15
+      origin: [12.5, 5]
+    top_wall:
+      geometry: rectangle
+      width: 15
+      height: 5
+      origin: [5, 12.5]
+    bot_wall:
+      geometry: rectangle
+      width: 15
+      height: 5
+      origin: [5, -2.5]

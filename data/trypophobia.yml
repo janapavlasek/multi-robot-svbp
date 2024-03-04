@@ -1,0 +1,69 @@
+data:
+  width: 10
+  height: 10
+  origin: [0, 0]
+  obstacles:
+    spot1:
+      geometry: circle
+      radius: 0.6
+      origin: [4.4, 5.3]
+    spot2:
+      geometry: circle
+      radius: 1.18
+      origin: [2.5, 2.5]
+    spot3:
+      geometry: circle
+      radius: 2.0
+      origin: [-1.7, 4.0]
+    spot4:
+      geometry: circle
+      radius: 1.8
+      origin: [6.3, 3.8]
+    spot5:
+      geometry: circle
+      radius: 1.7
+      origin: [4.2, -1.2]
+    spot6:
+      geometry: circle
+      radius: 0.3
+      origin: [5.0, 0.8]
+    spot7:
+      geometry: circle
+      radius: 0.3
+      origin: [7.2, 1.5]
+    spot8:
+      geometry: circle
+      radius: 0.6
+      origin: [1.7, 5.3]
+    spot9:
+      geometry: circle
+      radius: 0.25
+      origin: [3.8, 6.0]
+    spot10:
+      geometry: circle
+      radius: 1.5
+      origin: [10.0, 0.0]
+    spot11:
+      geometry: circle
+      radius: 1.0
+      origin: [1.8, 8.0]
+    spot12:
+      geometry: circle
+      radius: 2.3
+      origin: [5.8, 11.0]
+    spot13:
+      geometry: circle
+      radius: 0.18
+      origin: [6.0, 7.0]
+    spot14:
+      geometry: circle
+      radius: 0.24
+      origin: [7.2, 8.4]
+    spot15:
+      geometry: circle
+      radius: 0.5
+      origin: [9.3, 6.2]
+    spot16:
+      geometry: circle
+      radius: 0.23
+      origin: [8.4, 4.0]

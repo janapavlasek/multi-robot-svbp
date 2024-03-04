@@ -1,0 +1,25 @@
+data:
+  width: 10
+  height: 10
+  origin: [0, 0]
+  obstacles:
+    rect1:
+      geometry: rectangle
+      width: 2
+      height: 2
+      origin: [3, 3]
+    rect2:
+      geometry: rectangle
+      width: 2
+      height: 2
+      origin: [3, 7]
+    rect3:
+      geometry: rectangle
+      width: 2
+      height: 2
+      origin: [7, 3]
+    rect4:
+      geometry: rectangle
+      width: 2
+      height: 2
+      origin: [7, 7]

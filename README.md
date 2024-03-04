@@ -1,2 +1,9 @@
 # multi-robot-svbp
-Code for the multi-robot SVBP paper.
+Multi-robot SVBP project.
+
+## Installation
+
+In this repo, run:
+```bash
+pip install -e .
+```
