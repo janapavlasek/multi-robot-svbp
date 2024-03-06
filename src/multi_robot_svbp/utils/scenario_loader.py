@@ -38,7 +38,7 @@ def load_default_scenario(num_robots=5, env_perturb=1e-4,
 
     docking_pts = torch.tensor([[1, 1], [5, 1], [9, 1], [1, 5], [9, 5], [1, 9], [5, 9], [9, 9]],
                                **tensor_kwargs)
-    docking_pts += env_perturb * torch.randn(*docking_pts.shape) # small perturb in the goals and environment
+    docking_pts += env_perturb * torch.randn(*docking_pts.shape, device=docking_pts.device) # small perturb in the goals and environment
 
     start_idx = np.random.choice(np.arange(docking_pts.shape[0]), num_robots, replace=False)
     goal_idx = np.random.choice(np.arange(docking_pts.shape[0]), num_robots, replace=False)
