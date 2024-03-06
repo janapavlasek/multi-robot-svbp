@@ -1,6 +1,6 @@
 # multi-robot-svbp
 
-This repository is a supplementry for [torch-bp](https://github.com/janapavlasek/torch-bp). The code contains python scripts that runs experiments for multi-robot collision test in different environments using the belief propogation algorihtms in `torch-bp`. This code accompanies the paper *Stein variational belief propagation for multi-robot coordination*. Please [cite us](#citation) if you use this code for your research.
+This repository is an application using [torch-bp](https://github.com/janapavlasek/torch-bp). The code contains Python scripts that run experiments for multi-robot collision tests in different environments using the belief propagation algorithms in `torch-bp`. This code accompanies the paper *Stein variational belief propagation for multi-robot coordination*. Please [cite us](#citation) if you use this code for your research.
 
 Visit [*Project Webpage*](https://progress.eecs.umich.edu/projects/stein-bp/) for more details about the project.
 
