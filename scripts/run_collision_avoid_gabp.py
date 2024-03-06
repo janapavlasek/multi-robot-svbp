@@ -205,8 +205,8 @@ def sample_gaussians(means: torch.Tensor, covars: torch.Tensor,
 def run_sim(args, out_dir="output/exp/gabp/collision", save_fig=True):
     # Load scenario
     scenario_data = load_default_scenario(args.num_robots, ENV_PERTURB, args.tensor_kwargs) \
-        if args.scenario_file is None else \
-        load_yaml_scenario(args.scenario_file, ENV_PERTURB, args.tensor_kwargs)
+        if args.scene is None else \
+        load_yaml_scenario(args.scene, ENV_PERTURB, args.tensor_kwargs)
 
     # Setup environment
     num_robots = scenario_data['num_robots']
@@ -238,6 +238,7 @@ def run_sim(args, out_dir="output/exp/gabp/collision", save_fig=True):
                                     tensor_kwargs=args.tensor_kwargs)
 
     # Saving related variables
+    # out_dir = f"output/exp/sbp/{args.scene.split('/')[-1].replace('.yml', '')}/{it}"
     os.makedirs(out_dir, exist_ok=True)
 
     # Plot starting
@@ -300,17 +301,25 @@ def run_sim(args, out_dir="output/exp/gabp/collision", save_fig=True):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Linearized GBP Collision Avoidance')
-
-    parser.add_argument('--runs', default=1, type=int,
-                        help='Number of runs.')
-    parser.add_argument('-o', '--scenario-file', default=None, type=str,
+    
+    parser.add_argument('-s', '--scene', default="data/scenes/squares_cross.yml", type=str,
                         help='Scenario file Path')
     parser.add_argument('-n', '--num-robots', default=N, type=int,
                         help='Number of agents. (Not applicable if scenario file was defined)')
+    parser.add_argument('-k', '--num-particles', default=50, type=int,
+                        help='Number of particles.')
     parser.add_argument('-t', '--sim-time', default=SIM_TIME, type=float,
                         help='Length of simulation (seconds).')
     parser.add_argument('-r', '--comm-radius', default=COMM_RADIUS, type=float,
-                        help='Communication radius (meters).')
+                        help=f'Communication radius (meters). Default: {COMM_RADIUS} m')
+    parser.add_argument('--robot-radius', default=ROBOT_RADIUS, type=float,
+                        help=f'Robot radius (meters). Default: {ROBOT_RADIUS} m')
+    parser.add_argument('--dt', default=DT, type=float,
+                        help=f'Robot radius (meters). Default: {DT} secs')
+    parser.add_argument('--ctrl-space', default='acc', type=str,
+                        help='Control space. Default: \'acc\'')
+    parser.add_argument('--runs', default=1, type=int,
+                        help='Number of runs.')
     parser.add_argument('--viz', action='store_true',
                         help='Draw sim.')
     parser.add_argument('--edges', action='store_true',
@@ -318,7 +327,7 @@ def parse_args():
     parser.add_argument('--vels', action='store_true',
                         help='Draw velocity arrows on sim.')
     parser.add_argument('--cuda', action='store_true',
-                        help='Use the GPU.')
+                        help='Use GPU.')
     parser.add_argument('--save', action='store_true',
                         help='Save figures.')
 

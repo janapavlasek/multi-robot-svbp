@@ -144,7 +144,9 @@ def parse_args():
     parser = argparse.ArgumentParser(description='BP Flocking')
 
     parser.add_argument('-s', '--scene', default="data/scenes/squares_cross.yml", type=str,
-                        help='Number of agents.')
+                        help='Scenario file Path')
+    parser.add_argument('-n', '--num-robots', default=N, type=int,
+                        help='Number of agents. (Not applicable if scenario file was defined)')
     parser.add_argument('-k', '--num-particles', default=50, type=int,
                         help='Number of particles.')
     parser.add_argument('-t', '--sim-time', default=SIM_TIME, type=float,
