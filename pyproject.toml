@@ -20,8 +20,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/janapavlasek/mrf-swarm"
-"Bug Tracker" = "https://github.com/janapavlasek/mrf-swarm/issues"
+"Homepage" = "https://github.com/janapavlasek/multi-robot-svbp"
+"Bug Tracker" = "https://github.com/janapavlasek/multi-robot-svbp/issues"
 
 [tool.black]
 line-length = 100
